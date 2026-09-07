@@ -9,10 +9,14 @@
         header { background-color: #1b365d; color: white; text-align: center; padding: 25px 15px; }
         header h1 { margin: 0; font-size: 24px; }
         header p { margin: 5px 0 0; font-size: 14px; color: #d0d7de; }
-        .container { max-width: 800px; margin: 20px auto; padding: 0 15px; }
+        .container { max-width: 900px; margin: 20px auto; padding: 0 15px; }
         .card { background: white; padding: 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .card h2 { color: #1b365d; border-bottom: 2px solid #e1e4e8; padding-bottom: 8px; margin-top: 0; }
-        footer { text-align: center; padding: 15px; background-color: #1b365d; color: white; font-size: 13px; position: fixed; bottom: 0; width: 100%; }
+        .notice-board { background: #fff8e1; border-left: 5px solid #ffc107; padding: 15px; margin-bottom: 20px; border-radius: 4px; }
+        .notice-board h3 { margin-top: 0; color: #856404; }
+        .notice-board ul { padding-left: 20px; margin-bottom: 0; }
+        .notice-board li { margin-bottom: 8px; }
+        footer { text-align: center; padding: 15px; background-color: #1b365d; color: white; font-size: 13px; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -23,19 +27,36 @@
     </header>
 
     <div class="container">
+        
+        <!-- नोटिस बोर्ड सेक्शन -->
+        <div class="notice-board">
+            <h3>📢 मुख्य सूचनाएं / Notice Board</h3>
+            <ul>
+                <li>विद्यालय में नए सत्र के प्रवेश प्रारंभ हैं।</li>
+                <li>अगस्त माह की सांस्कृतिक गतिविधियों के फोटोग्राफ्स जल्द अपलोड किए जाएंगे।</li>
+                <li>अभिभावक-शिक्षक बैठक (PTM) से संबंधित सूचना जल्द ही यहाँ प्रदर्शित की जाएगी।</li>
+            </ul>
+        </div>
+
         <div class="card">
             <h2>विद्यालय परिचय</h2>
-            <p>आपका हमारे विद्यालय की आधिकारिक वेबसाइट पर स्वागत है। यह विद्यालय प्रधानमंत्री स्कूल फॉर राइजिंग इंडिया (PM SHRI) योजना के अंतर्गत आधुनिक सुविधाओं और गुणवत्तापूर्ण शिक्षा से सुसज्जित है।</p>
+            <p>आपका हमारे विद्यालय की आधिकारिक वेबसाइट पर स्वागत है। यह विद्यालय प्रधानमंत्री स्कूल फॉर राइजिंग इंडिया (PM SHRI) योजना के अंतर्गत आधुनिक सुविधाओं, स्मार्ट क्लासरूम और गुणवत्तापूर्ण शिक्षा से सुसज्जित है।</p>
+        </div>
+
+        <div class="card">
+            <h2>प्रधानाचार्य का संदेश</h2>
+            <p>"हमारा उद्देश्य छात्रों में केवल किताबी ज्ञान देना नहीं, बल्कि उन्हें नैतिक मूल्यों, अनुशासन और आधुनिक तकनीकी कौशल में निपुण बनाना है ताकि वे भविष्य के जिम्मेदार नागरिक बन सकें।"</p>
         </div>
 
         <div class="card">
             <h2>मुख्य गतिविधियाँ एवं विशेषताएँ</h2>
             <ul>
-                <li>डिजिटल स्मार्ट क्लासरूम और कंप्यूटर लैब</li>
+                <li>डिजिटल स्मार्ट क्लासरूम और आधुनिक कंप्यूटर लैब</li>
                 <li>खेलकूद, विज्ञान मेला और सांस्कृतिक कार्यक्रम</li>
-                <li>अनुभवी और समर्पित शिक्षकों द्वारा शिक्षण</li>
+                <li>अनुभवी और समर्पित शिक्षकों द्वारा गुणवत्तापूर्ण शिक्षण</li>
             </ul>
         </div>
+
     </div>
 
     <footer>
