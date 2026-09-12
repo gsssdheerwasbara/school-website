@@ -10,20 +10,25 @@
         header { background-color: #1b365d; color: white; text-align: center; padding: 20px 15px; }
         header h1 { margin: 0; font-size: 24px; }
         header p { margin: 5px 0 0; font-size: 14px; color: #d0d7de; }
-        .navbar { background-color: #0f223d; display: flex; justify-content: center; flex-wrap: wrap; }
+        .navbar { background-color: #0f223d; display: flex; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .navbar ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
         .navbar li { position: relative; }
-        .navbar a { display: block; color: white; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; }
+        .navbar a { display: block; color: white; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; transition: background 0.3s; }
         .navbar a:hover { background-color: #ffc107; color: #1b365d; }
+        .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 200px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1; top: 100%; left: 0; border-radius: 0 0 5px 5px; }
+        .dropdown-content a { color: #333; padding: 10px 15px; text-decoration: none; display: block; text-align: left; font-weight: normal; border-bottom: 1px solid #f1f1f1; }
+        .dropdown-content a:hover { background-color: #f8f9fa; color: #1b365d; }
+        .dropdown:hover .dropdown-content { display: block; }
         .container { max-width: 900px; margin: 20px auto; padding: 0 15px; }
         .card { background: white; padding: 25px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .card h2 { color: #1b365d; border-bottom: 2px solid #e1e4e8; padding-bottom: 8px; margin-top: 0; }
-        .map-btn { display: inline-block; background-color: #1b365d; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold; margin-top: 15px; }
         .form-group { margin-bottom: 15px; }
         .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: #1b365d; }
-        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
-        .submit-btn { background-color: #1b365d; color: white; border: none; padding: 12px 20px; font-size: 16px; font-weight: bold; border-radius: 4px; cursor: pointer; width: 100%; }
-        footer { text-align: center; padding: 15px; background-color: #1b365d; color: white; margin-top: 40px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; box-sizing: border-box; }
+        .form-group textarea { resize: vertical; height: 100px; }
+        .submit-btn { background-color: #1b365d; color: white; border: none; padding: 12px 20px; font-size: 16px; font-weight: bold; border-radius: 4px; cursor: pointer; transition: background 0.3s; width: 100%; }
+        .submit-btn:hover { background-color: #ffc107; color: #1b365d; }
+        footer { text-align: center; padding: 15px; background-color: #1b365d; color: white; font-size: 13px; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -31,38 +36,96 @@
         <div>📞 Helpline: 9829307951 | 📧 gsssdheerwasbara@gmail.com</div>
         <div>PM SHRI Initiative</div>
     </div>
+    
     <header>
         <h1>पी.एम. श्री राजकीय उच्च माध्यमिक विद्यालय, धीरवास बड़ा</h1>
         <p>तारानगर, चूरू (राजस्थान) | PM SHRI GSSS Dheerwas Bara</p>
     </header>
+    
     <nav class="navbar">
         <ul>
             <li><a href="index.html">HOME</a></li>
-            <li><a href="teaching.html">TEACHING STAFF</a></li>
-            <li><a href="non-teaching.html">NON-TEACHING STAFF</a></li>
+            <li class="dropdown">
+                <a href="#">ABOUT US ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">School Profile</a>
+                    <a href="#">Principal's Message</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">ACADEMICS ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Curriculum</a>
+                    <a href="#">Smart Classes</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">FACULTY ▾</a>
+                <div class="dropdown-content">
+                    <a href="teaching.html">Teaching Staff</a>
+                    <a href="non-teaching.html">Non-Teaching Staff</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">ACTIVITIES ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Sports & Games</a>
+                    <a href="#">Cultural Events</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">FACILITIES ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Computer Lab</a>
+                    <a href="#">Library</a>
+                </div>
+            </li>
+            <li><a href="#">ADMISSION</a></li>
+            <li><a href="#">GALLERY</a></li>
             <li><a href="contact.html">CONTACT</a></li>
         </ul>
     </nav>
+    
     <div class="container">
         <div class="card">
             <h2>संपर्क सूत्र / Contact Us</h2>
             <p><strong>पता:</strong> पी.एम. श्री राजकीय उच्च माध्यमिक विद्यालय, धीरवास बड़ा, तहसील - तारानगर, जिला - चूरू, राजस्थान</p>
             <p><strong>मोबाइल:</strong> 9829307951</p>
             <p><strong>ईमेल:</strong> gsssdheerwasbara@gmail.com</p>
+            
             <h3 style="color: #1b365d; margin-top: 25px;">विद्यालय का समय</h3>
             <p>1 अप्रैल - 30 सितंबर: 7:30 AM - 1:00 PM</p>
             <p>1 अक्टूबर - 31 मार्च: 10:00 AM - 4:00 PM</p>
-            <a href="https://maps.app.goo.gl/dZG6tSMu7S1wwuRS7?g_st=am" target="_blank" class="map-btn">📍 Google Map पर देखें</a>
+
+            <h3 style="color: #1b365d; margin-top: 25px;">गूगल मैप लोकेशन</h3>
+            <div style="margin-top: 15px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <iframe src="https://maps.google.com/maps?q=Dheerwas%20Bara,%20Taranagar,%20Churu,%20Rajasthan&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
         </div>
+
         <div class="card">
-            <h2>पूछताछ / Inquiry Form</h2>
+            <h2>ऑनलाइन पूछताछ / Inquiry Form</h2>
+            <p>यदि आपके पास कोई सवाल या सुझाव है, तो नीचे दिए गए फॉर्म के माध्यम से हमें संदेश भेज सकते हैं:</p>
             <form action="mailto:gsssdheerwasbara@gmail.com" method="POST" enctype="text/plain">
-                <div class="form-group"><label>नाम:</label><input type="text" name="Name" required></div>
-                <div class="form-group"><label>मोबाइल:</label><input type="tel" name="Phone" required></div>
-                <div class="form-group"><label>संदेश:</label><textarea name="Message" rows="4" required></textarea></div>
-                <button type="submit" class="submit-btn">संदेश भेजें</button>
+                <div class="form-group">
+                    <label>आपका नाम / Your Name:</label>
+                    <input type="text" name="Name" required placeholder="अपना पूरा नाम दर्ज करें">
+                </div>
+                <div class="form-group">
+                    <label>मोबाइल नंबर / Mobile Number:</label>
+                    <input type="tel" name="Phone" required placeholder="अपना मोबाइल नंबर दर्ज करें">
+                </div>
+                <div class="form-group">
+                    <label>संदेश / Message:</label>
+                    <textarea name="Message" rows="4" required placeholder="अपना संदेश या प्रश्न यहाँ लिखें..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">संदेश भेजें / Submit</button>
             </form>
         </div>
     </div>
+    
+    <footer>
+        <p>© 2026 PM SHRI GSSS Dheerwas Bara. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
