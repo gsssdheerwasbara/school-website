@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Profile - PM SHRI GSSS Dheerwas Bara</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; line-height: 1.6; }
+        .top-bar { background-color: #1b365d; color: #d0d7de; padding: 8px 20px; font-size: 13px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        header { background-color: #1b365d; color: white; text-align: center; padding: 20px 15px; }
+        header h1 { margin: 0; font-size: 24px; }
+        header p { margin: 5px 0 0; font-size: 14px; color: #d0d7de; }
+        
+        .navbar { background-color: #0f223d; display: flex; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .navbar ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; }
+        .navbar li { position: relative; }
+        .navbar a { display: block; color: white; padding: 12px 18px; text-decoration: none; font-size: 14px; font-weight: bold; transition: background 0.3s; }
+        .navbar a:hover { background-color: #ffc107; color: #1b365d; }
+        
+        .dropdown-content { display: none; position: absolute; background-color: #ffffff; min-width: 200px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1; top: 100%; left: 0; border-radius: 0 0 5px 5px; }
+        .dropdown-content a { color: #333; padding: 10px 15px; text-decoration: none; display: block; text-align: left; font-weight: normal; border-bottom: 1px solid #f1f1f1; }
+        .dropdown-content a:hover { background-color: #f8f9fa; color: #1b365d; }
+        .dropdown:hover .dropdown-content { display: block; }
+        
+        .breadcrumb { text-align: center; padding: 20px 0 10px; font-size: 13px; color: #666; }
+        .breadcrumb a { color: #1b365d; text-decoration: none; }
+        .page-title { text-align: center; color: #1b365d; font-size: 28px; margin-bottom: 30px; }
+        .page-title span { border-bottom: 3px solid #ffc107; padding-bottom: 5px; }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
+        
+        .profile-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); margin-bottom: 30px; border-top: 4px solid #1b365d; }
+        .profile-card h3 { color: #1b365d; border-bottom: 2px solid #e1e4e8; padding-bottom: 10px; margin-top: 0; font-size: 22px; display: flex; align-items: center; gap: 10px; }
+        .profile-card p { text-align: justify; color: #555; font-size: 15px; }
+        
+        /* Two Column Layout for wider screens */
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        
+        /* Timeline Style for History */
+        .history-list { list-style-type: none; padding-left: 0; margin-top: 15px; }
+        .history-list li { position: relative; padding-left: 25px; margin-bottom: 15px; color: #555; text-align: justify; font-size: 15px; }
+        .history-list li::before { content: "•"; color: #ffc107; font-weight: bold; font-size: 24px; position: absolute; left: 0; top: -5px; }
+        .history-list strong { color: #1b365d; font-size: 16px; }
+        
+        /* Highlight Badges */
+        .badge { background-color: #ffc107; color: #1b365d; padding: 4px 10px; border-radius: 20px; font-weight: bold; font-size: 13px; margin-left: 10px; }
+        .achievement-list { padding-left: 20px; color: #555; }
+        .achievement-list li { margin-bottom: 12px; }
+        
+        footer { background-color: #0c1a2e; color: #8892a0; text-align: center; padding: 20px 15px; font-size: 13px; margin-top: 20px; }
+        
+        @media (max-width: 768px) {
+            .grid-2 { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <span>📞 Helpline: 9829307951</span> | <span>📧 gsssdheerwasbara@gmail.com</span>
+        </div>
+        <div class="top-bar-right">
+            <span>PM SHRI Initiative</span>
+        </div>
+    </div>
+    
+    <header>
+        <h1>पी.एम. श्री राजकीय उच्च माध्यमिक विद्यालय, धीरवास बड़ा</h1>
+        <p>तारानगर, चूरू (राजस्थान) | PM SHRI GSSS Dheerwas Bara</p>
+    </header>
+    
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li class="dropdown">
+                <a href="#">ABOUT US ▾</a>
+                <div class="dropdown-content">
+                    <a href="school-profile.html">School Profile</a>
+                    <a href="#">Principal's Message</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">ACADEMICS ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Curriculum</a>
+                    <a href="#">Smart Classes</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">FACULTY ▾</a>
+                <div class="dropdown-content">
+                    <a href="teaching.html">Teaching Staff</a>
+                    <a href="non-teaching.html">Non-Teaching Staff</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">ACTIVITIES ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Sports & Games</a>
+                    <a href="#">Cultural Events</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#">FACILITIES ▾</a>
+                <div class="dropdown-content">
+                    <a href="#">Computer Lab</a>
+                    <a href="#">Library</a>
+                </div>
+            </li>
+            <li><a href="#">ADMISSION</a></li>
+            <li><a href="#">GALLERY</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </nav>
+    
+    <div class="breadcrumb">
+        <a href="index.html">Home</a> > About Us > School Profile
+    </div>
+    
+    <div class="container">
+        <h2 class="page-title"><span>विद्यालय परिचय / School Profile</span></h2>
+
+        <div class="grid-2">
+            <!-- Section 1: Intro & History -->
+            <div class="profile-card">
+                <h3>🏛️ परिचयात्मक विवरण एवं इतिहास</h3>
+                <p>पी.एम. श्री राजकीय उच्च माध्यमिक विद्यालय (<strong>U-DISE कोड: 08040101103</strong>) चूरू जिले के तारानगर ब्लॉक का एक अग्रणी शिक्षण संस्थान है। वर्तमान में विद्यालय का कुशल नेतृत्व प्रधानाचार्य <strong>श्रीमती शर्मिला कुमारी</strong> जी कर रही हैं।</p>
+                <p>लगभग एक सदी पुरानी इस विद्यालय की विकास यात्रा अत्यंत गौरवशाली रही है:</p>
+                <ul class="history-list">
+                    <li><strong>1930:</strong> प्राथमिक विद्यालय के रूप में शिक्षा के सफर की शुरुआत।</li>
+                    <li><strong>1960 - 1975:</strong> क्रमशः उच्च प्राथमिक और माध्यमिक विद्यालय के रूप में क्रमोन्नत।</li>
+                    <li><strong>2007:</strong> उच्च माध्यमिक (कला संकाय) का दर्जा प्राप्त।</li>
+                    <li><strong>2012 - 2021:</strong> विज्ञान संकाय (2012-13) और कृषि विज्ञान संकाय (2021-22) की विधिवत शुरुआत।</li>
+                    <li><strong>PM SHRI चयन:</strong> भारत सरकार की महत्वकांक्षी 'पीएमश्री' योजना के तहत चयन, जो NEP 2020 के आदर्श स्कूलों के रूप में विद्यालय के कायाकल्प की नींव है।</li>
+                </ul>
+            </div>
+
+            <!-- Section 2: Academics -->
+            <div class="profile-card">
+                <h3>🏆 अकादमिक उत्कृष्टता <span class="badge">100% Result</span></h3>
+                <p>विद्यालय का परीक्षा परिणाम गुणात्मक और संख्यात्मक दोनों पैमानों पर सदैव उत्कृष्ट रहा है:</p>
+                <ul class="achievement-list">
+                    <li><strong>कला वर्ग (Arts):</strong> पिछले 3 वर्षों से लगातार 100% परीक्षा परिणाम। सत्र 2025-26 में सभी 40 छात्र उत्तीर्ण, जिनमें 23 ने प्रथम श्रेणी प्राप्त की।</li>
+                    <li><strong>विज्ञान वर्ग (Science):</strong> 2012-13 में स्थापना के बाद से 100% सफलता का रिकॉर्ड। सत्र 2025-26 में सभी विद्यार्थियों ने प्रथम श्रेणी प्राप्त की।</li>
+                    <li><strong>कृषि विज्ञान (Agriculture):</strong> स्थापना से अब तक 100% परिणाम, सभी छात्रों की प्रथम श्रेणी।</li>
+                    <li><strong>कक्षा 10वीं बोर्ड:</strong> 100% सफलता। 2025-26 में लगभग 78% विद्यार्थियों ने प्रथम श्रेणी हासिल की है, जो हमारे 'उपचारात्मक शिक्षण' (Remedial Teaching) का सकारात्मक परिणाम है।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="grid-2">
+            <!-- Section 3: Sports -->
+            <div class="profile-card">
+                <h3>🏅 खेलकूद में ऐतिहासिक उपलब्धियां</h3>
+                <p>शैक्षणिक क्षेत्र के साथ-साथ खेलकूद में विद्यालय ने कई कीर्तिमान स्थापित किए हैं:</p>
+                <ul class="achievement-list">
+                    <li><strong>खो-खो के सिरमौर:</strong> 19 वर्ष आयु वर्ग में टीम ने लगातार 13 वर्षों (2013-2025) तक जिला स्तर पर स्वर्ण पदक जीता है। 17 वर्ष आयु वर्ग में भी लगातार 4 वर्ष स्वर्ण पदक।</li>
+                    <li><strong>नेटबॉल:</strong> 17 वर्ष आयु वर्ग में जिला, राज्य और नेशनल तीनों स्तरों पर गोल्ड मेडल। 19 वर्ष वर्ग में लगातार 4 साल (2022-2025) स्वर्ण पदक।</li>
+                    <li><strong>राष्ट्रीय चयन:</strong> खो-खो और नेटबॉल में विद्यालय के 4 छात्रों का राष्ट्रीय (National) स्तर पर चयन हुआ है।</li>
+                    <li><strong>अन्य खेल:</strong> तीरंदाजी और वुशु में जिला स्तर पर स्वर्ण पदक, वुशु में राज्य स्तर पर कांस्य, तथा एथलेटिक्स में 3 रजत व 2 कांस्य पदक जीते गए हैं।</li>
+                </ul>
+            </div>
+
+            <!-- Section 4: Innovations & Facilities -->
+            <div class="profile-card">
+                <h3>💡 नवाचार एवं 21वीं सदी के कौशल</h3>
+                <p>विद्यालय छात्रों के समग्र विकास (Holistic Development) के लिए कई नवाचार अपना रहा है:</p>
+                <ul class="achievement-list">
+                    <li><strong>संविधान कक्ष (Constitution Room):</strong> मौलिक अधिकारों और कर्तव्यों की व्यावहारिक शिक्षा देने के लिए विशेष चित्रांकन वाला कक्ष।</li>
+                    <li><strong>तकनीकी अपग्रेड:</strong> डिजिटल इंटरेक्टिव पैनल, ई-कंटेंट, DIKSHA पोर्टल और AI/रोबोटिक्स लैब के सिद्धांतों से जुड़ाव।</li>
+                    <li><strong>व्यावसायिक शिक्षा (Vocational):</strong> अपैरल मेड-अप्स एवं होम फर्निशिंग का NSQF आधारित कोर्स एवं हैंड्स-ऑन ट्रेनिंग।</li>
+                    <li><strong>पर्यावरण एवं स्वास्थ्य:</strong> जैविक खेती आधारित 'किचन गार्डन' (जिसका उपयोग MDM में होता है), बालिकाओं के लिए आत्मरक्षा प्रशिक्षण व इको क्लब द्वारा सघन वृक्षारोपण।</li>
+                    <li><strong>नो-बैग डे:</strong> शनिवार को रचनात्मक गतिविधियाँ और पीयर लर्निंग (Peer Learning)।</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer>
+        <p>© 2026 PM SHRI GSSS Dheerwas Bara. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
